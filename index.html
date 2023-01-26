@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CART 411</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="script.js"></script>
+</head>
+<body>
+    <div id="page-title" class="border-bot menu-item">
+        <h1>CART 411 CLASS WEBSITE</h1>
+        <div id="home-description">
+            <!-- <p class="title">CART 451-AA</p> -->
+            <p class="subtitle">Winter 2023</p>
+            <p class="subtitle">Justine Lardeux</p>
+            <p class="subtitle">40030920</p>
+        </div>
+    </div>
+    <div class="container flex">
+        <div id="menu">
+            <ul>
+               <div class="menu-item"><li><a href="#entries-content-1">Initial Project</a></li></div>
+               <div class="menu-item"><a href="#entries-content-2">To Implement</a></li></div>
+            </ul>
+        </div>
+        <div id="entries">
+            <!-- <div id="container-header" class="nodisplay"> -->
+            <!-- <div id="container-header" class=""> -->
+
+                <div id="entries-content-1" class="entry-content">
+                    <p class="entry-title">Project Overview (Initial State)</p>
+                    <p class="entry-subtitle">Week 1 to 3 (Until January 25th, 2023)</p>
+                    <div class="entry-content">
+                        <div id="slider">
+                            <div id="slider-prev" class="slider-button"><p><</p></div>
+                            <div id="slider-inner"></div>
+                            <div id="slider-next" class="slider-button"><p>></p></div>
+                        </div>
+                        <p class="entry-subtitle">HIGH-LEVEL DESCRIPTION:</p>
+                        <p>This project is an app that allows good consumers to get a fuller and quicker picture of the different companies selling food across America. Everytime an user scans a product’s UPC code (or enters it in the search bar), the program searches into different databases to identify the mother company of the brand and different outsourced assessments regarding their workers' treatment, its management governance, its environmental impacts, and its nutritional values. After displaying the company’s page, the user then indicates if he decided to buy or not the product and the reason(s) behind it. This allows the users to revisit their different buying decisions with a timestamp and visual depictions of their reasons. 
+                        </p>
+                        <p>The web-based tool is built on Node.js.</p>
+                        <br><br>
+                        <p class="entry-subtitle">TECHNOLOGIES IMPLEMENTED SO FAR:</p>
+                        <p>From the whole concept, the green nodes are the ones already working and implemented in this GUI navigation flowchart:</p>
+                        <img src="assets/Updated-GUI.png" alt="">
+                        <br>
+                        <p>Essentially, the basic code for the SEARCH component of the overall project is written. This part is the most crucial one, since it handles the research through different databases to obtain a company profile on different predetermined aspects. From user input (UPC code or brand), I am already able to achieve the basic research and data handling for the company profile, financials and external sources about its habits. Here is a flowchart depicting the interactions between the client and the server sides to achieve the search component:</p>
+                        <img src="assets/Search_Flowchart.png" alt="">
+                        <p>You can also read an exerpt of my final project report in my previous class about the mechanics of my code for more details:</p>
+                        <div id="entry-iframe"><iframe src="assets/LardeuxJ_FinalProject_FinalReport.pdf" alt=""></iframe></div>
+                        <br><br>
+                        <!-- <iframe src="assets/LardeuxJ_FinalProject_FinalReport.pdf" alt="">
+                        <br><br> -->
+                    </div>
+                </div>
+
+                <div id="entries-content-2" class="active">
+                    <p class="entry-title">To Implement in This Class</p>
+                    <p class="entry-subtitle">Week 1 to 3 (Until January 25th, 2023)</p>
+                    <div class="entry-content">
+                        <p class="entry-subtitle">SEARCH COMPONENT: </p>
+                        <p>Being the component of the project I decided to implement within the frame of this class, it is much more clear what needs to be implemented or reworked. On the server side, I would like to work more on the search wikiAPI search so I can find more results. As of now, the system does not try to find the company directly from the keywords, it can only consider it as a brand (not the main company). Also, if a keyword has some special characters, the system will majoritarily not find any result. Working on this request would greatly improve the efficiency of my project. On the client side, I would like to work on the design, such as prioritizing the information so it is easier to read, while being careful to not prioritize biased elements. Also, the interactive components are currently elementary. I still need to add a loading page to indicate the user that the server side is looking for their search prompt.</p>
+                        <br><br>
+                        <p class="entry-subtitle">HISTORY COMPONENT: </p>
+                        <p>On the search page, when a company is found, the user is prompted to choose between the ‘BUY’ and the ‘PASSED’ option. As of now, these choices are not active, but I would like to be able to push into a database the different products a user has searched/scanned and their decision to buy it or not. I would also like to implement different reasons the user can select to explain their decision. The userId, their choice, the reasons and the Item object will then be pushed into a database for me to be able to make assessment on the collected data in the future. It will also allow the users to view their history and make their own observations.</p>
+                        <br><br>
+                        <p class="entry-subtitle">LOG IN/SIGN IN/ACCOUNT COMPONENTS: </p>
+                        <p>To have a functioning history, these three components need to be implemented. The user needs to be able to create an account (username, password and city only). This will allow me to allocate each search to each user for their history, and to also collect demographic data. This information can be modified through the ‘account’ section in time. The account will also be deletable. The password encryption will be done with Bcrypt, a password hashing function compatible with Node.js. The accounts data will also be located in their own collection on my CheckoutApp MongoDB database.</p>
+                        <br><br>
+                        <p class="entry-subtitle">SCAN COMPONENT: </p>
+                        <p>Since the app is meant to be used on the go, at the grocery store, it will be important to implement the scanner option. I will continue exploring Quagga.js to have a free option. However, I will monitor the new updates and products that could help me achieve this component on all devices (not just Android devices). Ultimately, I only need a UPC code reader, since the manipulations with the UPC are already written from the Search section.</p>
+                        <br><br>
+                        <p class="entry-subtitle">ABOUT/CONTACT COMPONENT: </p>
+                        <p>The about page will be static, but will contain all the sources and information about the project. The contact section will be situated just below and will be an hugely important component to widen my database. As of now, the brands that can be found are big ones, and are mainly American. I would like to be able to find more variety of brands, especially living in Canada. With the contact section, I want to allow users to request to add in the UPC database. The UPCitemDB allows keyholders to push in their API database directly.</p>
+                        <br><br>
+                    </div>
+                </div>
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <!-- <script>
+        
+        let menuItems = document.getElementsByClassName('menu-item');
+
+        for (i = 0; i < menuItems.length; i++) {
+            menuItems[i].addEventListener("click", displayResponse);
+            console.log(menuItems);
+        }
+
+        function displayResponse() {
+            hideActive();
+            let menuSelectionID = this.getAttribute("data-link");
+            console.log(menuSelectionID);
+            this.classList.add("active-tab");
+            document.getElementById(menuSelectionID).classList.add("active");
+            document.getElementById(menuSelectionID).classList.remove("nodisplay");
+        }
+
+        function hideActive() {
+            let activeElements = document.getElementsByClassName('active');
+            console.log(activeElements);
+            for (i = 0; i < activeElements.length; i++) {
+            activeElements[i].classList.add("nodisplay");
+            activeElements[i].classList.remove("active");
+            }
+            for (i = 0; i < menuItems.length; i++) {
+                menuItems[i].classList.remove("active-tab");
+            }
+        }
+    
+    </script> -->
+</body>
+</html>
