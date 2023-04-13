@@ -28,6 +28,8 @@
                <div class="menu-item"><li><a href="#entries-content-1">Initial Project</a></li></div>
                <div class="menu-item"><a href="#entries-content-2">To Implement</a></li></div>
                <div class="menu-item"><a href="#entries-content-3">Inspirational Works</a></li></div>
+               <div class="menu-item"><a href="#entries-content-4">Final Delivery Report</a></li></div>
+               <div class="menu-item"><a href="#entries-content-5">Final Delivery Documentation</a></li></div>
             </ul>
         </div>
         <div id="entries">
@@ -89,6 +91,58 @@
                     <p class="entry-subtitle">Week 5 (February 8, 2023)</p>
                     <div class="entry-content">
                         <div id="entry-iframe"><iframe src="assets/Influences.pdf" alt=""></iframe></div>
+                    </div>
+                </div>
+                <div id="entries-content-4" class="active">
+                    <p class="entry-title">Final Delivery Report</p>
+                    <p class="entry-subtitle">April 2023</p>
+                    <div class="entry-content">
+                        <p>The purpose of my project is to provide consumers with a fast and comprehensive way to learn about the companies behind the food products they buy. I developed a web-based app that allows users to scan a product's UPC code or search by brand, and instantly retrieve information about the company that produces it. This includes details on the company's worker treatment practices, management governance, environmental impact, and nutritional values. My app is built on Node.js and incorporates multiple databases to provide users with the most up-to-date and reliable information. By empowering consumers with this knowledge, I aim to promote greater transparency and accountability in the food industry.</p>
+                        <br><br>
+                        <p class="entry-subtitle">METHODOLOGY</p>
+                        <p>The web-based app was developed using a combination of programming languages and frameworks, including Node.js, Express, and MongoDB. The app was designed to run on a server-side platform, which allows for efficient processing of user requests and quick retrieval of data from multiple databases.</p>
+                        <p>The app incorporates various APIs to retrieve information about companies based on UPC codes and brand names. Specifically, I utilized the UPCItemDB API, the Wikipedia API, and the Yahoo Finance API. These APIs provide access to a large amount of data related to companies and products, including information on worker treatment practices, management governance, environmental impact, and nutritional values. I also made the Food and Agricultural Benchmark into its own database to be interpreted and used in real-time for company habits. </p>
+                        <p>To ensure the app was user-friendly and easy to navigate, I followed design principles such as simplicity, consistency, and intuitive layout. I conducted testing throughout the development process, including functional testing and user acceptance testing, to identify and address any bugs or usability issues.</p>
+                        <br><br>
+                        <p class="entry-subtitle">USER INTERFACE</p>
+                        <p>The web-based app's user interface was designed with simplicity and modularity in mind. The app features a clean and minimalist layout, with a color scheme including punchy colors that are often found in food packaging design.The design incorporates a pairing of gradients, which gives the app dimension and a dynamic look.</p>
+                        <p>The app's home page features two main sections for searching information about companies. The first section allows users to enter a brand name or UPC code to retrieve information about a company, while the second section enables users to scan a product's UPC code directly from the camera. The scanning feature utilizes the device's camera to scan the UPC code and retrieve the relevant information about the company.</p>
+                        <p>The design is currently only optimized for mobile screens, while responsive. The design follows a "brutalist" approach, with a focus on raw and unpolished aesthetics. The design incorporates bold typography, simple shapes, and a lack of unnecessary embellishments or ornamentation. This approach gives the app a distinctive and memorable look that sets it apart from other web-based apps.</p>
+                        <p>Note that while a history section is planned, it is not yet implemented in the current version of the app. Contrarily to my first version, the ‘About’ section and the ‘History’ section have switched locations in the design. This decision followed discussions through playtestings and ensured a more cohesive organization of each section.</p>
+                        <br><br>
+                        <p class="entry-subtitle">RESULT AND EVALUATION</p>
+                        <p>The implementation objectives for this project were to create a web-based app that would allow users to search for information about companies selling food across America and to implement a history component and search component.</p>
+                        <p>Search Component: The search component was successfully implemented in this version of the app. On the server side, the wikiAPI search was improved to find more results, and the system now considers a keyword as a brand and as the main company. On the client side, the design was improved to prioritize information and to ensure that biased elements are not prioritized. Additionally, interactive components were added, including a loading page to indicate to the user that the server is looking for their search prompt.</p>
+                        <p>History Component: The history component was not completed in this version of the app. However, once it is implemented, it will allow users to view their search history and make their own observations. It will also allow the user's search history and decision to buy or not buy a product to be stored in a database for future assessment and analysis.</p>
+                        <p>Account Component: The implementation of these components is crucial for the functioning of the history feature. However, I explored this idea independently and did not integrate it into the project. Users would have been able to create an account with a username, password, and city information. Password encryption would have been done with Bcrypt, a password hashing function compatible with Node.js. The account information would have been stored in their own collection in my CheckoutApp MongoDB database. This feature would have allowed me to allocate each search to each user for their history, and to also collect demographic data. The account information would also be modifiable through the 'account' section, and deletable.</p>
+                        <p>Scanner Component: The implementation of the scanner option was crucial for the app's usability, as it allows users to quickly and easily scan UPC codes while on the go. I previously wanted to use Quagga.js, but new implementations of browsers allowed me to use the Barcode-Detection API as a free option to implement this feature. I also had to find the ways to manipulate the different inputs so it fits with the format of the UPC databases. I monitored updates and new products to ensure that this component could be functional on all devices, not just Android devices. Ultimately, the scanner option is functional on all browsers.</p>
+                        <p>Overall, the implementation objectives for the project were met with the exception of the history and account components. Although I explored these ideas independently, I did not integrate them into the project. Future work on the app could include the implementation of these features to enhance user experience and provide additional value. The search and scan components were successfully implemented, and the user interface was designed to be simple and modular, allowing for quick and easy access to the app's features.</p>
+                        <br><br>
+                        <p class="entry-subtitle">FUTURE WORK</p>
+                        <p>One of the biggest challenges of this project was the lack of accessible data for UPC codes, especially for non-US based companies. In the future, I plan to work on building my own free database of UPC codes and their corresponding company information. This would involve scraping data from various sources and compiling it into a centralized database.</p>
+                        <p>Additionally, I would like to continue improving the search component by refining the search algorithm to better handle special characters and finding the main company behind a brand. I would also like to expand the database to include information on additional products, beyond just food items.</p>
+                        <p>Another area of focus for future development is the implementation of the account component. This would allow users to create and manage their own accounts, modify their personal information and view their search history. Password encryption using Bcrypt would ensure the security of user data.</p>
+                        <p>Finally, I would like to explore more options for implementing the scanner component on all devices, not just Android. Monitoring updates and new products in this area could provide valuable insights and opportunities for improvement.</p>
+                        <br><br>
+                        <p>In conclusion, this project has been an opportunity for me to apply my knowledge in web development and to create a tool that can potentially improve consumers' decision-making when it comes to purchasing food products. The app's features and functionality have been implemented, and there are clear objectives for future work to improve the app's usability and database.</p>
+                        <p>One of my goals is to build my own free database, which would allow users from all over the world to access information about different companies and their products. However, this would require a considerable amount of resources and funding, and I am open to collaborating with organizations that share this vision.</p>
+                    </div>
+                </div>
+                <div id="entries-content-5" class="active">
+                    <p class="entry-title">Final Delivery Documentation</p>
+                    <p class="entry-subtitle">April 2023</p>
+                    <div class="entry-content">
+                        <p class="entry-subtitle">SEARCH COMPONENT</p>
+                        <<video controls="controls" name="Scan Component">
+                            <source src="./assets/Scan_component.mov">
+                        </video>
+                        <br><br>
+                        <p class="entry-subtitle">SCAN COMPONENT</p>
+                        <video controls="controls" name="Search Component">
+                            <source src="./assets/Search_component.mov">
+                        </video>
+                        <br><br>
+                        <img src="./assets/Terminal.png" alt="">
                     </div>
                 </div>
             <!-- </div> -->
